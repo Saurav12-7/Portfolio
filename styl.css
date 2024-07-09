@@ -532,6 +532,7 @@ a
     transform: translate(-50%,-50%);
     animation: blobAnimate 3s linear infinite;
 }
+
 @keyframes blobAnimate {
     50%
     {
@@ -700,9 +701,79 @@ footer
 display: flex;
 gap: 1rem;
 }
+.ham-container
+{
+    
+    display: none;
+    z-index: 1000;
+}
+.ham
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 2rem;
+    height: 1rem;
+    /* border: 1px solid black; */
+    /* display: none; */
+}
+
+.ham span
+{
+    width:100%;
+    height: 3px;
+    background-color: black;
+    /* border: 1px solid black; */
+
+}
+.aside
+{
+    display: none;
+    position: absolute;
+    top:0.5rem;
+    right:0.5rem;
+    border: 1px solid black;
+    width: 35%;
+    height: 100vh;
+    z-index: 1000;
+    padding-top: 2rem;
+    background-image:linear-gradient(#938e8e,#7a7878,#585759);
+    box-shadow: 2px 2px 5px rgb(80, 79, 79)  , -2px -2px 5px rgb(80, 79, 79);
+
+}
+.nav-items2
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 1rem 1rem;
+}
+.nav-items2 div
+{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.aside hr
+{
+    width: 70%;
+    margin-top:1rem ;
+    margin-bottom:1rem ;
+}
+.nav-items2 div a
+{
+    color: white;
+}
 
 
-@media (max-width:1300px)
+.nav-items2 div:hover
+{
+    transition:0.8s;
+    font-weight: bold;
+}
+
+@media (max-width:1207px)
 {
     .hero-section
     {
@@ -778,7 +849,18 @@ gap: 1rem;
     }
     .project-card:hover .project-number
     {
-        display: none;
+        font-size: 100px;
+        
+    }
+    .project-card:hover .project-number-right
+    {
+        right: 1rem;
+        
+    }
+    .project-card:hover .project-number-left
+    {
+        left: 1rem;
+        
     }
     .project-card:hover .project-content
     {
@@ -794,7 +876,23 @@ gap: 1rem;
     {
         gap: 5rem;
     }
+    .ham-container
+    {
+        display: flex;
+        position: absolute;
+        right:1rem
+    }
+    .nav-items
+    {
+        display: none;
+    }
+
+    #sidebar:target
+    {
+        display: block;
+    }
 }
+
 
 .swal
 {
@@ -822,3 +920,19 @@ gap: 1rem;
     color: red;
     font-size: 40px;
   }
+
+@media (max-width:679px)
+{
+    
+    .hero-section-description
+    {
+        font-size: 1rem;
+        white-space: normal;
+           
+    }
+    #skills
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
